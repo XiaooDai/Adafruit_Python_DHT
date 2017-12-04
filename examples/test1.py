@@ -5,7 +5,6 @@ import socket
 import threading
 import logging
 
-
 # change this to the values from MCS web console
 DEVICE_INFO = {
     'device_id' : 'D1QxLyzK',
@@ -62,7 +61,6 @@ def waitAndExecuteCommand(commandChannel):
                 setLED(commandValue)
 
 def setupLED():
-    global pin
     # on LinkIt Smart 7699, pin 44 is the Wi-Fi LED.
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(4,GPIO.OUT)
